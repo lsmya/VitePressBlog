@@ -9,18 +9,31 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Examples', link: '/markdown-examples'}
+            {text: 'Examples', link: '/markdown-examples'},
+            {text: 'Android', link: '/android/basics'}
         ],
 
-        sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    {text: 'Markdown Examples', link: '/markdown-examples'},
-                    {text: 'Runtime API Examples', link: '/api-examples'}
-                ]
-            }
-        ],
+        sidebar: {
+            '/': [
+                {
+                    text: 'Examples',
+                    items: [
+                        {text: 'Markdown Examples', link: '/markdown-examples'},
+                        {text: 'Runtime API Examples', link: '/api-examples'}
+                    ]
+                }
+            ],
+            '/android/': [
+                {
+                    text: 'Android',
+                    items: [
+                        {text: 'Android基础', link: '/android/basics'},
+                        {text: 'Android进阶', link: '/android/advanced'},
+                        {text: 'Jetpack Compose', link: '/android/compose'}
+                    ]
+                }
+            ]
+        },
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
